@@ -1,0 +1,29 @@
+version: 2
+updates:
+  - package-ecosystem: nuget
+    directory: /src/Volzedd.Core
+    registries: "*"
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: nuget
+    directory: /src/Volzedd.Data
+    registries: "*"
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: nuget
+    directory: /src/Volzedd.Telemetry
+    registries: "*"
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+
+registries:
+  nuget:
+    type: nuget-feed
+    url: https://api.nuget.org/v3/index.json
